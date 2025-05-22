@@ -11,13 +11,13 @@ import { PhoneCallIcon } from "lucide-react";
 
 export default function Sidebar() {
     return (
-        <div className="flex items-center justify-around m-4">
+        <div className="flex items-center md:justify-between justify-start m-4 w-full">
             
             
-            <div className="flex items-center">
+            <div className="flex items-center justify-between">
                 <NavigationMenu>
                     <NavigationMenuList>
-                        <Link href="/docs" legacyBehavior passHref>
+                        <Link href="#home" legacyBehavior passHref>
                             <NavigationMenuLink className={`${navigationMenuTriggerStyle()} mx-2`}>
                                 inicio
                             </NavigationMenuLink>
@@ -26,7 +26,7 @@ export default function Sidebar() {
                 </NavigationMenu>
                 <NavigationMenu>
                     <NavigationMenuList>
-                        <Link href="/docs" legacyBehavior passHref>
+                        <Link href="#" legacyBehavior passHref>
                             <NavigationMenuLink className={`${navigationMenuTriggerStyle()} mx-2`}>
                                 Pedidos
                             </NavigationMenuLink>
@@ -43,10 +43,10 @@ export default function Sidebar() {
                     </NavigationMenuList>
                 </NavigationMenu>
             </div>
-
             <Button className="cursor-pointer">
                 <PhoneCallIcon /> Peça aqui
             </Button>
+
         </div>
     ) 
 }
